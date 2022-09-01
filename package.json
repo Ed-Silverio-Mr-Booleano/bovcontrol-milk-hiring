@@ -1,0 +1,23 @@
+{
+  "name": "bovcontrol-milk-hiring",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ed-Silverio-Mr-Booleano/bovcontrol-milk-hiring.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ed-Silverio-Mr-Booleano/bovcontrol-milk-hiring/issues"
+  },
+  "homepage": "https://github.com/Ed-Silverio-Mr-Booleano/bovcontrol-milk-hiring#readme",
+  "dependencies": {
+    "git-commit-msg-linter": "^4.1.3"
+  }
+}
