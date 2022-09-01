@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --passWithNoTests",
+    "test:staged": "jest --passWithNoTests",
+    "dev": "ts-node-dev --transpile-only --ignore-watch node_modules --respawn src/main.ts",
+    "start": "node ./dist/main.js",
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
@@ -18,6 +22,7 @@
   },
   "homepage": "https://github.com/Ed-Silverio-Mr-Booleano/bovcontrol-milk-hiring#readme",
   "dependencies": {
+    "dotenv": "^16.0.2",
     "git-commit-msg-linter": "^4.1.3"
   },
   "devDependencies": {
