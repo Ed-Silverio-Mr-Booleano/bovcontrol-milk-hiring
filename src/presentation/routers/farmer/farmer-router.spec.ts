@@ -40,4 +40,13 @@ describe('Farmer Router', () => {
       expect(response.body).toStrictEqual(ExpectedData)
     })
   })
+
+  describe('POST /farmers', () => {
+    test('should return 201 if data was created', async () => {
+      const InputData = { id: '1', farmer: 'Jhon Doe', farm: 'Legacy Vegetable', distance_from_factory: 85 }
+      jest.spyOn(mockCreateFarmerUseCase, 'execute').mockImplementation(() => Promise.resolve(true))
+      const response = await request(server).post('/farmers').send(InputData)
+      expect(response.status).toBe(201)
+    })
+  })
 })
