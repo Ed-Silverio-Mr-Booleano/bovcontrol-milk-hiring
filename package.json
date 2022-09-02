@@ -7,8 +7,9 @@
     "test": "jest --passWithNoTests",
     "test:staged": "jest --passWithNoTests",
     "dev": "ts-node-dev --transpile-only --ignore-watch node_modules --respawn src/main.ts",
-    "start": "node dist/main.js",
-    "build": "tsc"
+    "build": "tsc",
+    "start": "node ./dist/main.js"
+    
   },
   "repository": {
     "type": "git",
