@@ -1,4 +1,4 @@
 
-export interface GetMilkVolumeDay {
-  execute(): Promise<any[] | null>
+export interface GetMilkVolumeDayUseCase {
+  execute(farmer: string, month: string): Promise<any[] | null>
 }

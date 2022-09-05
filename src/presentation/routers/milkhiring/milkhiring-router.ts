@@ -1,7 +1,7 @@
 import express, { Request, Response } from 'express'
 import { GetMilkVolumeDayUseCase } from '../../../domain/interfaces/use-cases/milkhiring/get-milk-volume-day'
 import { CreateMilkHiringUseCase } from '../../../domain/interfaces/use-cases/milkhiring/create-milkhiring-use-case'
-export default function FarmersRouter (
+export default function MilkHiringsRouter (
   createMilkHiringUseCase: CreateMilkHiringUseCase,
   getMilkVolumeDayUseCase: GetMilkVolumeDayUseCase
 ): express.Router {
@@ -9,7 +9,7 @@ export default function FarmersRouter (
 
   router.get('/', async (request: Request, response: Response) => {
     try {
-      const milkVolume = await getMilkVolumeDayUseCase.execute()
+      const milkVolume = await getMilkVolumeDayUseCase.execute(request.params.farmer, request.params.month)
       response.send(milkVolume)
     } catch (error) {
       console.log(error.message)
