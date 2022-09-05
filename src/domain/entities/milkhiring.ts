@@ -1,6 +1,8 @@
 export interface MilkHiringRequestEntity {
   id?: string
-  date: Date
+  day: string
+  month: string
+  year: string
   milk_quantity: number
   farmer_id: string
 }
